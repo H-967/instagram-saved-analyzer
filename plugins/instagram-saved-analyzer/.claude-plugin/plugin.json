@@ -1,0 +1,6 @@
+{
+  "name": "instagram-saved-analyzer",
+  "description": "인스타그램 저장 컬렉션의 카드뉴스 텍스트와 캡션을 읽어 5개 카테고리로 정리한다",
+  "version": "1.0.0",
+  "author": { "name": "H967" }
+}
