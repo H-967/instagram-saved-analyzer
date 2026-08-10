@@ -1,0 +1,15 @@
+{
+  "name": "h967-skills",
+  "owner": {
+    "name": "H967",
+    "url": "https://github.com/H-967"
+  },
+  "plugins": [
+    {
+      "name": "instagram-saved-analyzer",
+      "source": "./plugins/instagram-saved-analyzer",
+      "description": "인스타그램에 저장해둔 게시물을 대신 읽고 카테고리별로 정리해주는 스킬",
+      "version": "1.0.0"
+    }
+  ]
+}
