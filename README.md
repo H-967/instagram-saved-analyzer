@@ -6,6 +6,8 @@ A Claude skill that reads the Instagram posts you saved and never went back to, 
 
 Built and used daily for three weeks before release.
 
+> **Requires Claude Code.** The skill drives a browser through Playwright MCP, so a terminal is needed for setup. Mac and Windows both work in principle — only Mac is verified so far.
+
 ---
 
 ## What it does
@@ -21,7 +23,27 @@ Read only. It never likes, follows, comments, or sends DMs.
 
 ## Install
 
-### 1. Playwright MCP (needed to drive the browser)
+### 1. Get the skill (the easy way)
+
+Download [`SKILL.md`](plugins/instagram-saved-analyzer/skills/instagram-saved-analyzer/SKILL.md), hand the file to Claude, and say:
+
+```
+put this skill in my skills folder
+```
+
+That is it. Claude places it at `~/.claude/skills/instagram-saved-analyzer/SKILL.md` for you.
+
+<details>
+<summary>Or install as a plugin (Claude Code terminal only)</summary>
+
+```
+/plugin marketplace add H-967/instagram-saved-analyzer
+/plugin install instagram-saved-analyzer@h967-skills
+```
+
+</details>
+
+### 2. Playwright MCP (needed to drive the browser)
 
 Paste this into your terminal. Requires Node.js 18 or newer.
 
@@ -30,17 +52,6 @@ claude mcp add playwright npx @playwright/mcp@latest
 ```
 
 Run `/mcp` inside Claude Code — if playwright shows up as connected, you are set.
-
-### 2. The skill
-
-Run these two lines in Claude Code.
-
-```
-/plugin marketplace add H-967/instagram-saved-analyzer
-/plugin install instagram-saved-analyzer@h967-skills
-```
-
-Manual install also works. Download `plugins/instagram-saved-analyzer/skills/instagram-saved-analyzer/SKILL.md` and put it at `~/.claude/skills/instagram-saved-analyzer/SKILL.md`.
 
 ### 3. Log into Instagram
 
@@ -148,7 +159,8 @@ The following are deliberately absent and will stay absent.
 
 - Save directly to a Notion database
 - Resume from where the last run stopped
-- Windows support
+- Windows verification
+- A version that works without a terminal
 
 Open an issue if you want something.
 
